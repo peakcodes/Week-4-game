@@ -49,7 +49,7 @@ setRandom();
 
 $(".crystalimage").on("click", function () {
    
-// Set local var and apply this to above function to pull information
+// determine user score based on clicks of crystals - set up click logic
     var userClick = $(this).attr("Value");
 
     if (userClick == "ione") {
@@ -80,21 +80,5 @@ $(".crystalimage").on("click", function () {
     $("#numW").text(wins);
     $("#numL").text(losses);
     }
-
-
-
-
-
-
-// $(."ione").text(cone);
-// $(."itwo").text(ctwo);
-// $(."ithree").text(cthree);
-// $(."ifour").text(cfour);
-
-// determine user score based on clicks of crystals - set up click logic
-
-
-
-// <!-- Set up points, game and reset logic with for loop -->
 
 });
