@@ -1,0 +1,37 @@
+body {
+    background-image: url("https://image.freepik.com/free-psd/white-wood-texture-background-design_1022-75.jpg")
+}
+
+.header {
+    color:white;
+    background-color: orange;
+    margin-right: auto;
+}
+
+.header1 {
+
+}
+
+.instructions {
+    color: blue;
+    background-color: bisque;
+
+}
+
+.scoretext {
+    color: white;
+    font-size: 300%;
+    background-color: lightblue;
+}
+
+.randNum {
+    margin-left: left;
+    background-color: greenyellow;
+    font-size: 600%;
+}
+
+.totW {
+    margin-left: left;
+    background-color: green;
+}
+
