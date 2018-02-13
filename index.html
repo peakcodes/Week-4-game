@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 	<script type="text/javascript" src="./assets/javascript/game.js"></script>
 </head>
-<body>
+<body class="masked">
 
 <div class="container"> 
 
@@ -19,22 +19,29 @@
     <div class="header col-md-4">
         <h1>Crystal Collector!</h1>
     </div>
-    <div class="header1 col-md-4">
     </div>
+    <div class="break row">
+    <p></p>
     </div>
 
 <!-- Create Game Description and Instructions Row-->
     <div class="row">
         <div class="instructions col-md-6">
-    <h3>Learn how to play below!</h3>
+        <p>How to play!</p>
 
-        <p>You will be given a random number at the start of the game.This number will be displayed below.</p>
+        <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score gors above the random number.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
-        <p id="Letsplay">Lets Play!!!</p>
+        <p>Dont be a loser...Be a Winner.</p>
+        <h3 id="Letsplay">Lets Play!!!</h3>
     </div>
     </div>
+
+    <div class="break row">
+            <p></p>
+            </div>
     
     <!-- Two boxes side by side
         Scoring box to left
@@ -48,32 +55,40 @@
 
     <div class="totW col-md-2">
             <p>Wins:<p id="numW"></p>
-               Losses:<p id"numL"></p>
-            </p>
+            <p>Losses:<p id="numL"></p>
     </div>
 
     </div>
 
-    <div class= col-md-0></div>
+    <div class="break row">
+            <p></p>
+            </div>
 <!-- Area for 4 boxes to showcase Crystals
             Will have click ability 
             Row with 4 columns-->
 
     <div class="crystal row">
 
-            <input type="image" class="crystalBtn" id="ione" src="./assets/images/crystalpurple.jpg" alt="Crystal One"/>
-            <input type="image" class="crystalBtn" id="itwo" src="./assets/images/crystalrainbow.jpg" alt="Crystal Two"/>
-            <input type="image" class="crystalBtn" id="ithree" src="./assets/images/crystalred.jpeg" alt="Crystal Three"/>
-            <input type="image" class="crystalBtn" id="ifour" src="./assets/images/crystalwhite.jpg" alt="Crystal Four"/>
+            <input type="image" class="crystalBtn flash" style="width: 250px; height: 250px" id="ione" src="./assets/images/crystalpurple.jpg" alt="Crystal One"/>
+            <input type="image" class="crystalBtn flash" style="width: 250px; height: 250px" id="itwo" src="./assets/images/crystalrainbow.jpg" alt="Crystal Two"/>
+            <input type="image" class="crystalBtn flash" style="width: 250px; height: 250px" id="ithree" src="./assets/images/crystalred.jpeg" alt="Crystal Three"/>
+            <input type="image" class="crystalBtn flash" style="width: 250px; height: 250px" id="ifour" src="./assets/images/crystalwhite.jpg" alt="Crystal Four"/>
 
         </div>
 <!-- Box stating score - Row Div-->
+<div class="break row">
+        <p></p>
+        </div>
 
-    <div class="scoretext row">
-        <div class="col-md-1"></div>
+    <div class="row">
+        <div class="scoretext col-md-3">
         <p>Your total score is...</p>
-        <p class="userScore"> </p>
-        <div class="col-md-11"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="scoretext1 col-md-3">
+        <p class="userScore"></p>
+        </div>
     </div>
 
 </div>

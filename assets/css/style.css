@@ -1,15 +1,14 @@
 body {
-    background-image: url("https://image.freepik.com/free-psd/white-wood-texture-background-design_1022-75.jpg")
+    background-image: url("http://www.homeplanetearth.org/wp-content/uploads/2017/08/7-Energy-Crystals-That-You-Should-Own.jpg");
 }
-
 .header {
     color:white;
     background-color: orange;
     margin-right: auto;
 }
 
-.header1 {
-
+.break {
+    background-color: transparent;
 }
 
 .instructions {
@@ -20,7 +19,13 @@ body {
 
 .scoretext {
     color: white;
-    font-size: 300%;
+    font-size: 150%;
+    background-color: lightblue;
+}
+
+.scoretext1 {
+    color: white;
+    font-size: 150%;
     background-color: lightblue;
 }
 
@@ -38,4 +43,19 @@ body {
 .userScore {
     color: black;
 }
+
+.flash:hover {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+  }
+  
+  @-webkit-keyframes flash {
+    0% {  opacity: .3;  }
+    100% { opacity: 1; }
+  }
+  @keyframes flash {
+    0% { opacity: .3; }
+    100% { opacity: 1;  }
+  }
 

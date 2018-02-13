@@ -9,14 +9,20 @@ var Random;
 var userPoints = 0;
 var userScore = 0;
 
-var coneValue=Math.floor(Math.random()*11+1)
-var ctwoValue=Math.floor(Math.random()*11+1)
-var cthreeValue=Math.floor(Math.random()*11+1)
-var cfourValue=Math.floor(Math.random()*11+1)
+
+var Random;
+var coneValue;
+var ctwoValue;
+var cthreeValue;
+var cfourValue;
 
 // Select random number for start of game. Number ranges from 19-120
 function setRandom () {
-var Random=Math.floor(Math.random()*101+19)
+Random=Math.floor(Math.random()*101+19)
+coneValue=Math.floor(Math.random()*11+1)
+ctwoValue=Math.floor(Math.random()*11+1)
+cthreeValue=Math.floor(Math.random()*11+1)
+cfourValue=Math.floor(Math.random()*11+1)
 
 $(".randNum").text(Random);
 console.log(Random);
@@ -48,21 +54,26 @@ $("#userScore").text(userPoints);
 // Determine user score call function
 
 setRandom();
-$(".userScore").text("hello");
 
-function playerWinsorLosses () {
+function playerWinsorLosses (Random) {
+    console.log(userPoints);
+    console.log(Random);
     if (userPoints === Random) {
         wins++;
-    console.log(wins);
+    
+        console.log(wins);
     }
     else if (userPoints > Random) {
         losses++;
-    console.log(losses);
-    }
-    $("#numW").text(wins);
-    $("#numL").text(losses);
-    }
-    console.log(userScore);
+
+        resetGame ();
+        console.log(losses);
+        }
+
+        $("#numW").text(wins);
+        $("#numL").text(losses);
+        }
+        console.log(userScore);
 
 $(".crystalBtn").click(function () {
 // determine user score based on clicks of crystals - set up click logic
@@ -74,23 +85,23 @@ $(".crystalBtn").click(function () {
         // console.log("userClick: ", userClick, " userPoints: ", userPoints, " coneValue: ", coneValue);
         userPoints += coneValue;
         // console.log("ione if");
-        playerWinsorLosses();
+        playerWinsorLosses(Random);
         $(".userScore").text(userPoints);
     }
     else if (userClick === "itwo") {
         userPoints += ctwoValue;
-        playerWinsorLosses();
+        playerWinsorLosses(Random);
         $(".userScore").text(userPoints);
     }
 
     else if (userClick === "ithree") {
         userPoints += cthreeValue;
-        playerWinsorLosses();
+        playerWinsorLosses(Random);
         $(".userScore").text(userPoints);
     }
     else if (userClick === "ifour") {
         userPoints += cfourValue;
-        playerWinsorLosses();
+        playerWinsorLosses(Random);
         $(".userScore").text(userPoints);
     }
     // console.log(userPoints);
@@ -100,4 +111,8 @@ $(".crystalBtn").click(function () {
     $(".userScore").text(userPoints);
 
 // Reset game and determine wins/loses
+function resetGame () {
+    setRandom ();
+    userPoints = 0;
+    }
 });
