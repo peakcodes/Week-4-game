@@ -38,6 +38,8 @@ body {
 .totW {
     margin-left: left;
     background-color: green;
+    font-weight: bold;
+    color: white;
 }
 
 .userScore {

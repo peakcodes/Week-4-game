@@ -60,11 +60,14 @@ function playerWinsorLosses (Random) {
     console.log(Random);
     if (userPoints === Random) {
         wins++;
+        alert("Victory! Way to be like a diamond and not crumble under pressure!");
+        resetGame ();
     
         console.log(wins);
     }
     else if (userPoints > Random) {
         losses++;
+        alert("Oh, so you didn't win a Math Olypiad medal?! Lets try this again.")
 
         resetGame ();
         console.log(losses);
